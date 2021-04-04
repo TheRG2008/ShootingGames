@@ -4,29 +4,17 @@ using UnityEngine;
 
 public class ShowTargets : MonoBehaviour
 {
-    [SerializeField] private GameObject LineAtack;
-    [SerializeField] private GameObject ShowTarget;
+    public GameObject Target1;
+    public GameObject Target2;
+    public GameObject Target3;
 
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
-    {
-
-        
-        //if (gameObject.GetComponent<CapsuleCollider>() == LineAtack.GetComponent<BoxCollider>())
-        //{
-        //    ShowTarget.SetActive(true);
-        //}
-    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "LineAtack")
-        {
-            ShowTarget.SetActive(true);
-        }
+        Target1.SetActive(true);        
+        Target2.SetActive(true);        
+        Target3.SetActive(true);
+     
+        
     }
 }
