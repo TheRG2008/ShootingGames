@@ -7,7 +7,8 @@ public class OpenBox : MonoBehaviour
     public GameObject Box;
     private void OnTriggerEnter(Collider other)
     {
-        var component = Box.GetComponent<Animation>().enabled = true;
+        if (Input.GetKey(KeyCode.Backspace)) 
+        Box.GetComponent<Animation>().enabled = true;
         
     }
 
