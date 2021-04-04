@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    //private Vector3 _dir;
+    [SerializeField] private float _speed;    
     public float gravity;
 
     private CharacterController _charController;
@@ -13,6 +12,7 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+        
         _charController = GetComponent<CharacterController>();
     }
 
@@ -32,15 +32,9 @@ public class PlayerMove : MonoBehaviour
         movement = transform.TransformDirection(movement);
         _charController.Move(movement);
 
-        
-
+     
 
     }
 
-    //private void FixedUpdate()
-    //{
-    //    //var speed = _speed * _dir * Time.deltaTime;
-    //    //transform.Translate(speed);
-    //    //_dir = Vector3.zero;
-    //}
+ 
 }
