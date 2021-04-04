@@ -7,7 +7,7 @@ public class LockedMouse : MonoBehaviour
     
     void Start()
     {
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     
