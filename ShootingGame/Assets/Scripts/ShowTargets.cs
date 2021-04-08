@@ -18,5 +18,9 @@ public class ShowTargets : MonoBehaviour
         Target1.GetComponent<Animation>().enabled = true;
         Target2.GetComponent<Animation>().enabled = true;
         Target3.GetComponent<Animation>().enabled = true;
+
+        Destroy(Target1, 2);
+        Destroy(Target2, 2);
+        Destroy(Target3, 2);
     }
 }

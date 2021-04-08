@@ -8,6 +8,8 @@ public class OpenBox : MonoBehaviour
     public GameObject Player;
     public GameObject Bullet;
     public GameObject Gun;
+    public GameObject GunInHand;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,7 +22,7 @@ public class OpenBox : MonoBehaviour
    
         Destroy(Bullet, 1);
         Destroy(Gun, 1);
-        
+        GunInHand.SetActive(true);
 
     }
 
