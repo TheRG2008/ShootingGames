@@ -14,6 +14,6 @@ public class Camera : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, Input.GetAxis("Mouse X") * mouseSens, 0);
-
+       
     }
 }
