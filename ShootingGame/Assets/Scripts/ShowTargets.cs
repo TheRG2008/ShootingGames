@@ -7,20 +7,19 @@ public class ShowTargets : MonoBehaviour
     public GameObject Target1;
     public GameObject Target2;
     public GameObject Target3;
-
+    public float i = 1;
 
     private void OnTriggerEnter(Collider other)
     {
-        Target1.SetActive(true);        
-        Target2.SetActive(true);        
+        Target1.SetActive(true);
+        Target2.SetActive(true);
         Target3.SetActive(true);
 
         Target1.GetComponent<Animation>().enabled = true;
         Target2.GetComponent<Animation>().enabled = true;
         Target3.GetComponent<Animation>().enabled = true;
 
-        Destroy(Target1, 2);
-        Destroy(Target2, 2);
-        Destroy(Target3, 2);
     }
+    
+   
 }

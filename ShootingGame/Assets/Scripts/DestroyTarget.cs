@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class DestroyTarget : MonoBehaviour
 {
-    public GameObject Player;
+    
     private float _point;
+    private void Start()
+    {
+        Destroy(gameObject, 3);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject);
