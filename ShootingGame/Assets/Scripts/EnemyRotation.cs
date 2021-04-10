@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class EnemyRotation : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform _target;
     [SerializeField] private float _speed;
+    [SerializeField] private GameObject _player;
 
 
 
 
-  
+
+
 
     private void OnTriggerStay (Collider other)
     {
         //transform.LookAt(target);
-        var pos = target.position - transform.position;
-        Quaternion rot = Quaternion.LookRotation(pos);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rot, _speed * Time.deltaTime);
+        if (other = _player.GetComponent<Collider>())
+        {
+            var pos = _target.position - transform.position;
+            Quaternion rot = Quaternion.LookRotation(pos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rot, _speed * Time.deltaTime);
+        }
+        
     }
 
 
