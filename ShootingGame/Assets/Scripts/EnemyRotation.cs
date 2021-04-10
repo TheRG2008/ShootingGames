@@ -22,7 +22,10 @@ public class EnemyRotation : MonoBehaviour
             var pos = _target.position - transform.position;
             Quaternion rot = Quaternion.LookRotation(pos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rot, _speed * Time.deltaTime);
+
+            transform.Rotate(0.0f, 0.0f, 5f);
         }
+
         
     }
 

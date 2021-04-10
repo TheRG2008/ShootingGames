@@ -75007,6 +75007,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8236953730184928927}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2047441809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8236953730286167310, guid: c17a37375d0d2794fbbae0495ad08054,
+    type: 3}
+  m_PrefabInstance: {fileID: 8236953730184928927}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2047674814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78700,10 +78706,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5979647495952112813, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5979647495952112813, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 2047441800}
+    - target: {fileID: 5979647495952112813, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 2047441809}
     - target: {fileID: 8086435142616272018, guid: 8858c9595da2f554385a3323828dd636,
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628334906873532723, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: m_Radius
+      value: 6.3477464
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628334906873532723, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628334906873532723, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628334906873532723, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8628334906873532723, guid: 8858c9595da2f554385a3323828dd636,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8858c9595da2f554385a3323828dd636, type: 3}
