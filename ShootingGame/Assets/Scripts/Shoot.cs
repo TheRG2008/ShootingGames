@@ -5,9 +5,10 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     [SerializeField] private GameObject _bullet; 
-    [SerializeField] private Transform _bulletSpawnPlace;
-    public int _countBullet = 0;
+    [SerializeField] private Transform _bulletSpawnPlace;    
     [SerializeField] private float _speed = 2;
+    public int _countBullet = 0;
+    private Animator _anim;
 
     private void Update()
     {
@@ -15,7 +16,7 @@ public class Shoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (_countBullet > 0) GrateShoot();
-            
+  
         }
     }
 

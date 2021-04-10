@@ -7,7 +7,7 @@ public class ShowTargets : MonoBehaviour
     public GameObject Target1;
     public GameObject Target2;
     public GameObject Target3;
-    public float i = 1;
+  
 
     private void OnTriggerEnter(Collider other)
     {
