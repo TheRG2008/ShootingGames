@@ -16,7 +16,7 @@ public class ShootAnimator : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            _anim.SetBool("Shoot", true);
+            _anim.SetBool("shoot", true);
         }
     }
 }

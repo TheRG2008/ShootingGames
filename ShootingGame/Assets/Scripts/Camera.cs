@@ -7,7 +7,7 @@ public class Camera : MonoBehaviour
     CharacterController MyPawnBody;
     float moveX, moveY;
     public float SensX = 5, SensY = 10;
-    // Start is called before the first frame update
+    
     void Start()
     {
         MyPawnBody = this.GetComponent<CharacterController>();

@@ -8,7 +8,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Transform _bulletSpawnPlace;    
     [SerializeField] private float _speed = 2;
     public int _countBullet = 0;
-    private Animator _anim;
+    
 
     private void Update()
     {
