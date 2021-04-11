@@ -17,7 +17,7 @@ public class OpenBox : MonoBehaviour
         Box.GetComponent<Animation>().enabled = true;
         if (Bullet)
         {
-            Player.GetComponent<Shoot>()._countBullet += 8;
+            Player.GetComponent<Shoot>().CountBullet += 8;
         }
    
         Destroy(Bullet, 0.2f);

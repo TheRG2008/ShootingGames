@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerIsDead : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerIsDead : MonoBehaviour
 
         if (_curentHP < 0)
         {
+            SceneManager.LoadScene("SampleScene");
             Debug.Log("Player is dead");
         }
 
