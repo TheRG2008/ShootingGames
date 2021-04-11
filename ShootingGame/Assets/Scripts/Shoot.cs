@@ -6,7 +6,7 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField] private GameObject _bullet; 
     [SerializeField] private Transform _bulletSpawnPlace;    
-    [SerializeField] private float _speed = 2;
+   
     public int _countBullet = 0;
     
 
