@@ -13,7 +13,7 @@ public class DestroyTarget : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject);
-        _point = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>()._point += 1;
+        _point = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().Point += 1;
     }
 
 }

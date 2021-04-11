@@ -10,6 +10,6 @@ public class DestroyEnemy : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(Enemy);
-        _point = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>()._point += 2;
+        _point = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().Point += 2;
     }
 }

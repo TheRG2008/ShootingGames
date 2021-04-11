@@ -20,8 +20,8 @@ public class OpenBox : MonoBehaviour
             Player.GetComponent<Shoot>()._countBullet += 8;
         }
    
-        Destroy(Bullet, 1);
-        Destroy(Gun, 1);
+        Destroy(Bullet, 0.2f);
+        Destroy(Gun, 0.2f);
         GunInHand.SetActive(true);
 
     }

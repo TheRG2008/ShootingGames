@@ -6,36 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float _playerCurHP;
-    [SerializeField] private GameObject bull;
-    private float _playerMaxHp = 100;
-    public float _point = 0;
+    private float _playerCurHP = 100;   
+    private float _point = 0;
+    public float PlayerMaxHp;
+    public float Point;
     
     
 
     void Awake ()
     {
-        _playerCurHP = _playerMaxHp;
+        PlayerMaxHp = _playerCurHP;
+        Point = _point;
     }
 
-    private void OnTrigerEnter (Collider other)
-    {
-       
-            _playerCurHP -= 5;
-            PlayerIsDead();
-        
-    }
-
-    private void PlayerIsDead()
-    {
-        if (_playerCurHP <= 0)
-        {
-            SceneManager.LoadScene("SampleScene");
-        }
-    }
-
-    void Update()
-    {
-        Debug.Log(_point);
-    }
 }
