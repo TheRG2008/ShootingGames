@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EnemyMove : MonoBehaviour
+public class MoveEnemy2 : MonoBehaviour
 {
     public float speed;
     private float waitTime;
     public float startWaitTime;
     public Transform[] moveSpots;
     private int randomeSpot;
+    private float _point;
 
 
     private void Start()
@@ -20,11 +20,6 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
-        //for (int i = 0; i < moveSpots.Length; i++)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, moveSpots[i].position, speed * Time.deltaTime);
-        //}
-
 
 
         transform.position = Vector3.MoveTowards(transform.position, moveSpots[randomeSpot].position, speed * Time.deltaTime);
@@ -41,5 +36,11 @@ public class EnemyMove : MonoBehaviour
                 waitTime -= Time.deltaTime;
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(this.gameObject);
+        _point = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().Point -= 2;
     }
 }
