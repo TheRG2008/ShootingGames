@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8628334906873532723}
   - component: {fileID: 1938333390}
   - component: {fileID: 1938333391}
+  - component: {fileID: 1938333396}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -143,7 +144,7 @@ MonoBehaviour:
   _gun1: {fileID: 981183915}
   _bullet: {fileID: 7009076343400273060, guid: c8c758e8f83f3294c8a5352ef66eb5ff, type: 3}
   _player: {fileID: 0}
-  _startTimeBtwShots1: 1.5
+  _startTimeBtwShots1: 0.5
 --- !u!114 &1938333391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,8 +158,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _speed: 2
+  _speed: 4
   _player: {fileID: 0}
+--- !u!114 &1938333396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8086435142616272018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfbb6f20104ff64cb6cc44ae83ea1e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  startWaitTime: 1
+  moveSpots:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8409987425171873340
 GameObject:
   m_ObjectHideFlags: 0
