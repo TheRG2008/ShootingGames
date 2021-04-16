@@ -20,10 +20,7 @@ public class EnemyMove : MonoBehaviour
 
     private void Update()
     {
-        //for (int i = 0; i < moveSpots.Length; i++)
-        //{
-        //    transform.position = Vector3.MoveTowards(transform.position, moveSpots[i].position, speed * Time.deltaTime);
-        //}
+     
 
 
 

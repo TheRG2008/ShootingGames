@@ -5,32 +5,41 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private GameObject _bullet; 
-    [SerializeField] private Transform _bulletSpawnPlace;    
-   
-    private int _countBullet;
-    public int CountBullet;
-    public GameObject BulletText;
+    [SerializeField] private GameObject _bullet;
+    [SerializeField] private GameObject _bullet2;
+    [SerializeField] private Transform _bulletSpawnPlace;
+    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject Gun;
+    [SerializeField] private GameObject ShootGun;
+    private int _bulletCount;
+    
 
     private void Awake()
     {
-        CountBullet = _countBullet;
+        //_bulletCount = Player.GetComponent<PlayerStats>().CountBullet;
     }
-
     private void Update()
     {
-        BulletText.GetComponent<Text>().text = "Патроны: " + CountBullet.ToString();
-        
+        _bulletCount = Player.GetComponent<PlayerStats>().CountBullet;
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            if (CountBullet > 0) GrateShoot();
+            if (_bulletCount > 0) GrateShoot();
   
         }
     }
 
     private void GrateShoot ()
     {
-        Instantiate(_bullet, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);
-        CountBullet--;
+        if (Gun)
+        {
+            Instantiate(_bullet, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);
+        }
+        else if (ShootGun)
+        {
+            Instantiate(_bullet2, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);
+        }
+       
+        _bulletCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().CountBullet -= 1;
     }
 }

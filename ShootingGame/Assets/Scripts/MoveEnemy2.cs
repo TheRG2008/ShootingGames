@@ -40,7 +40,7 @@ public class MoveEnemy2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject);      
         _point = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().Point -= 2;
     }
 }

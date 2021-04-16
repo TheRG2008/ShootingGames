@@ -83,36 +83,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8236953729235514350}
   m_Enabled: 1
---- !u!1 &8236953729724981210
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8236953729724981209}
-  m_Layer: 0
-  m_Name: BoolPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8236953729724981209
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8236953729724981210}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.119, y: 0.684, z: 1.715}
-  m_LocalScale: {x: 3.3333328, y: 3.3333328, z: 3.333332}
-  m_Children: []
-  m_Father: {fileID: 8236953730286167310}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8236953730286167319
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +120,6 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 8236953729235514347}
-  - {fileID: 8236953729724981209}
   - {fileID: 8241289083798104169}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -258,9 +227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45c0a0806498ea4db3cf5e57fd4c1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMaxHp: 100
-  _playerCurHP: 0
-  _point: 0
+  CountBullet: 0
+  PlayerMaxHp: 0
+  Point: 0
+  HpText: {fileID: 0}
+  PointText: {fileID: 0}
+  BulletText: {fileID: 0}
 --- !u!114 &8236953730286167317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,9 +258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 8752290569267282719, guid: 187cc74860e65f444a3bf300b16354ca, type: 3}
-  _bulletSpawnPlace: {fileID: 8236953729724981209}
-  _speed: 5
-  _countBullet: 20
+  _bulletSpawnPlace: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!143 &8236953730286167309
 CharacterController:
   m_ObjectHideFlags: 0
@@ -324,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4918146466755900, guid: b8472c75b2bc2ee4b98e87869dace24f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4918146466755900, guid: b8472c75b2bc2ee4b98e87869dace24f, type: 3}
       propertyPath: m_LocalScale.x
