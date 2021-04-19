@@ -19,6 +19,7 @@ public class PlayerStats : MonoBehaviour
 
     void Awake ()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         PlayerMaxHp = _playerCurHP;
         Point = _point;
         CountBullet = _countBullet;

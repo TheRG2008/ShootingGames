@@ -15,7 +15,7 @@ public class PlayerIsDead : MonoBehaviour
         if (_curentHP < 0)
         {
             SceneManager.LoadScene("SampleScene");
-            Debug.Log("Player is dead");
+            
         }
 
     }
