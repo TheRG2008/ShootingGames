@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private GameObject _bullet;
-    [SerializeField] private GameObject _bullet2;
+    [SerializeField] private GameObject _bullet;    
     [SerializeField] private Transform _bulletSpawnPlace;
     [SerializeField] private GameObject Player;
-    [SerializeField] private GameObject Gun;
-    [SerializeField] private GameObject ShootGun;
+    
     private int _bulletCount;
     
 
@@ -31,14 +29,8 @@ public class Shoot : MonoBehaviour
 
     private void GrateShoot ()
     {
-        if (Gun)
-        {
-            Instantiate(_bullet, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);
-        }
-        else if (ShootGun)
-        {
-            Instantiate(_bullet2, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);
-        }
+
+        Instantiate(_bullet, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);     
        
         _bulletCount = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().CountBullet -= 1;
     }

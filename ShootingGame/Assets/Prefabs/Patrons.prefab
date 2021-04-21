@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8720828041383312204}
   - component: {fileID: 8891649922930567647}
+  - component: {fileID: 814106597390248751}
   m_Layer: 0
   m_Name: Patrons
   m_TagString: Untagged
@@ -61,10 +62,22 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.1001289
-  m_Height: 4.6388993
+  m_Radius: 0.28246984
+  m_Height: 1.5753405
   m_Direction: 2
-  m_Center: {x: 0.064677715, y: -0.21883622, z: 1.0555419}
+  m_Center: {x: 0.083796695, y: -0.13560376, z: -0.23477648}
+--- !u!114 &814106597390248751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523455496696664699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd5b9f5ec71aa94984586571697a413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &807141322302949014
 GameObject:
   m_ObjectHideFlags: 0
