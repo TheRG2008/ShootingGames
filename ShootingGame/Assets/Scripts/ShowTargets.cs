@@ -15,9 +15,9 @@ public class ShowTargets : MonoBehaviour
         Target2.SetActive(true);
         Target3.SetActive(true);
 
-        Target1.GetComponent<Animation>().enabled = true;
-        Target2.GetComponent<Animation>().enabled = true;
-        Target3.GetComponent<Animation>().enabled = true;
+        //Target1.GetComponent<Animation>().enabled = true;
+        //Target2.GetComponent<Animation>().enabled = true;
+        //Target3.GetComponent<Animation>().enabled = true;
 
     }
     

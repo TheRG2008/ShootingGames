@@ -4,58 +4,46 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float speed = 6.0f;
-    //public float jumpValue = 8.0f;
-    public float gravity = 20.0f;
-    private Vector3 moveDirection = Vector3.zero;
+    [SerializeField] private float _speed;
+    private float _xMove;    
+    private float _zMove;
+    private float _yRotaye;
+    
+    private float _sensitivity = 200f;
+    private Vector3 _directional;
+    private CharacterController _player;
+    
 
-    void Update()
+    private void Awake()
     {
-        CharacterController controller = GetComponent<CharacterController>();
-        if (controller.isGrounded)
-        {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-            //if (Input.GetButton("Jump"))
-            //{
-            //    moveDirection.y = jumpValue;
-            //}
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
+        _player = GetComponent<CharacterController>();
+       
     }
-    //[SerializeField] private float _speed;    
-    //public float gravity;
+    private void Update()
+    {
+        Walk();
+        MouseLook();
+    }
+    void Walk()
+    {
+        _xMove = Input.GetAxis("Horizontal");
+        _zMove = Input.GetAxis("Vertical");     
+        
+        if (_player.isGrounded)
+        {
+            _directional = new Vector3(_xMove, 0f, _zMove);
+            _directional = transform.TransformDirection(_directional);
+        }
+        _directional.y -= 1;
+        _player.Move(_directional * _speed * Time.deltaTime);
+    }
 
-    //private CharacterController _charController;
-
-
-    //void Start()
-    //{
-
-    //    _charController = GetComponent<CharacterController>();
-    //}
-
-
-    //void Update()
-    //{
-
-    //    float deltaX = Input.GetAxis("Horizontal") * _speed;
-    //    float deltaZ = Input.GetAxis("Vertical") * _speed;
-
-    //    Vector3 movement = new Vector3(deltaX, 0, deltaZ);
-    //    movement = Vector3.ClampMagnitude(movement, _speed);
-
-    //    //movement.y = gravity;
-    //    movement *= Time.deltaTime;
-
-    //    movement = transform.TransformDirection(movement);
-    //    _charController.Move(movement);
-
-
-
-    //}
+    void MouseLook()
+    {
+        _yRotaye = Input.GetAxis("Mouse X");
+       
+        transform.Rotate(0, _yRotaye * _sensitivity * Time.deltaTime, 0);
+    }
 
 
 }
