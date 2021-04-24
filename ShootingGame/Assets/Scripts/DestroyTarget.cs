@@ -8,7 +8,7 @@ public class DestroyTarget : MonoBehaviour
     private float _point;
     private void Start()
     {
-        //Destroy(gameObject, 3);
+        Destroy(gameObject, 2);
     }
     private void OnCollisionEnter(Collision collision)
     {

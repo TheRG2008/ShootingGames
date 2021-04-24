@@ -1,12 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    [SerializeField] private float _jumpHeight;
+    [SerializeField] private float _gravity;
+
     private float _xMove;    
     private float _zMove;
+
     private float _yRotaye;
     
     private float _sensitivity = 200f;
@@ -23,8 +28,11 @@ public class PlayerMove : MonoBehaviour
     private void Update()
     {
         Walk();
-        MouseLook();
+        MouseLook();        
     }
+
+  
+
     void Walk()
     {
         _xMove = Input.GetAxis("Horizontal");
@@ -34,8 +42,13 @@ public class PlayerMove : MonoBehaviour
         {
             _directional = new Vector3(_xMove, 0f, _zMove);
             _directional = transform.TransformDirection(_directional);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _directional.y += _jumpHeight;
+            }
+
         }
-        _directional.y -= 1;
+        _directional.y -= _gravity;
         _player.Move(_directional * _speed * Time.deltaTime);
     }
 
