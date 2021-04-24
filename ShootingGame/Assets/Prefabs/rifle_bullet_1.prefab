@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 15
+  Damage: 40
 --- !u!136 &2320449383234494054
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -104,7 +105,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8752290569267282719}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.041623376
   m_Height: 0.39918894

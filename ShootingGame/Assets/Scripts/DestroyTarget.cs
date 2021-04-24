@@ -10,10 +10,12 @@ public class DestroyTarget : MonoBehaviour
     {
         Destroy(gameObject, 2);
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
         Destroy(this.gameObject);
         _point = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().Point += 1;
     }
+  
 
 }
