@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,9 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField] private GameObject _bullet;    
     [SerializeField] private Transform _bulletSpawnPlace;
+    [SerializeField] private Transform _mineSpawnPlace;
     [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject _mine;
 
     private int _bulletInMagazine;
     
@@ -30,7 +33,18 @@ public class Shoot : MonoBehaviour
             }             
         }
 
-       
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            
+            InstantMine();
+            
+        }
+
+    }
+
+    private void InstantMine()
+    {
+        Instantiate(_mine, _mineSpawnPlace.position, _mineSpawnPlace.rotation);
     }
 
     private void GrateShoot ()

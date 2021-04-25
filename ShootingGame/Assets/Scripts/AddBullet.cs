@@ -16,4 +16,13 @@ public class AddBullet : MonoBehaviour
         }
         
     }
+
+    public void ShowBullet()
+    {
+        gameObject.SetActive(true);
+    }
+    public void HideBullet()
+    {
+        gameObject.SetActive(false);
+    }
 }

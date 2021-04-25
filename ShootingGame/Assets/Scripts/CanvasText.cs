@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CanvasText : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Transform _pointSpawnEnemy;
+    [SerializeField] private GameObject _miniEnemy;
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        Instantiate(_miniEnemy, _pointSpawnEnemy.position, transform.rotation);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

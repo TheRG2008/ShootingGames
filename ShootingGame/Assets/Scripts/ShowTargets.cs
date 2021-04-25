@@ -9,8 +9,12 @@ public class ShowTargets : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Target1.SetActive(true);
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            Target1.SetActive(true);
+            Destroy(gameObject);
+        } 
+     
     }
     
    
