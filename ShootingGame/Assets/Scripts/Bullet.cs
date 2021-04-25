@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            other.GetComponent<Enemy>().TakeDamage(20);
+            other.GetComponent<Enemy>().TakeDamage(40);
         }
     }
 

@@ -36,7 +36,7 @@ public class PlayerStats : MonoBehaviour
     {
         HpText.GetComponent<Text>().text = "HP: " + PlayerCurHP.ToString();
         PointText.GetComponent<Text>().text = "Очки: " + Point.ToString();
-        BulletText.GetComponent<Text>().text = "Патроны: " + CountBullet.ToString();
+        BulletText.GetComponent<Text>().text = "Патроны: " + CountBullet.ToString() + "/" + BulletInMagazine.ToString();
 
         if (Input.GetKeyDown(KeyCode.R))
             Invoke("Reload", 2);

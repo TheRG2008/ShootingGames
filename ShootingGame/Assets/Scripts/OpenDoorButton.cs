@@ -1,26 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+
 
 public class OpenDoorButton : MonoBehaviour
 {
     [SerializeField] private GameObject _bulls;
     [SerializeField] private GameObject _box;
-    public UnityEvent OpenShow;
+    [SerializeField] private GameObject _wall;
+    
     
 
     private void OnTriggerEnter(Collider other)
     {
-        OpenShow?.Invoke();
+        _bulls.SetActive(true);
         _box.GetComponent<Rigidbody>().useGravity = true;
+        _wall.SetActive(false);
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (_bulls)
         _bulls.SetActive(false);
-        
+        _wall.SetActive(true);
         _box.GetComponent<Rigidbody>().useGravity = false;
     }
 
