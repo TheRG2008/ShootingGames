@@ -10,7 +10,7 @@ public class Mine : MonoBehaviour
 
     private void Start()   
     {        
-        Invoke("Explode", 4);
+        Invoke("Explode", 3);
     }   
 
     public void Explode ()
