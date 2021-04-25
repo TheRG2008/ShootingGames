@@ -8,7 +8,7 @@ public class DestroyTarget : MonoBehaviour
     private float _point;
     private void Start()
     {
-        //Destroy(gameObject, 2);
+        Destroy(gameObject, 3);
     }
 
     private void OnTriggerEnter(Collider other)
