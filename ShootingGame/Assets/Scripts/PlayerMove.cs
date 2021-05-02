@@ -11,7 +11,7 @@ public class PlayerMove : MonoBehaviour
 
     private float _xMove;    
     private float _zMove;
-
+    private Animator _anim;
     private float _yRotaye;
     
     private float _sensitivity = 200f;
@@ -23,10 +23,19 @@ public class PlayerMove : MonoBehaviour
     {
         _player = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
-
+        _anim = GetComponent<Animator>();
     }
     private void Update()
     {
+        if (_xMove != 0 || _zMove != 0)
+        {
+            _anim.SetBool("walk", true);
+        }
+        else
+        {
+            _anim.SetBool("walk", false);
+
+        }
         Walk();
         MouseLook();        
     }
@@ -51,6 +60,8 @@ public class PlayerMove : MonoBehaviour
         _directional.y -= _gravity;
         _player.Move(_directional * _speed * Time.deltaTime);
     }
+
+
 
     void MouseLook()
     {

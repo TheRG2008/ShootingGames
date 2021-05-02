@@ -5,26 +5,31 @@ using UnityEngine.AI;
 
 public class GreenEnemyMove : MonoBehaviour
 {
-    private Transform _point;
+    [SerializeField] private float _speed;
+    private GameObject[] _point;
     private NavMeshAgent _navMeshAgent;
     private float _countPoint;
-    [SerializeField] private float _speed;
+    private int _random;
+
 
 
     private void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        
     }
     void Start()
     {
-        _point = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().transform;
+        _point = GameObject.FindGameObjectsWithTag("Points");
+
+        _random = Random.Range(0, _point.Length);       
 
     }
 
 
     private void Update()
     {
-        _navMeshAgent.SetDestination(_point.position * _speed * Time.deltaTime);
+        _navMeshAgent.SetDestination(_point[_random].transform.position * _speed * Time.deltaTime);
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 490125300817035176}
   - component: {fileID: 2149940114837152860}
   - component: {fileID: 8961452695367301069}
+  - component: {fileID: 5485308535988426134}
   m_Layer: 0
   m_Name: BLUE_Mushroom3 (1)
   m_TagString: Enemy
@@ -133,7 +134,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &8961452695367301069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +147,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c63eb2e27a92704daa085a54a786bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5485308535988426134
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512575188653892088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c1d35bc10f89554f981dcb569b08644, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1512939270685057962
 GameObject:
   m_ObjectHideFlags: 0

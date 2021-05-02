@@ -256,7 +256,7 @@ Animator:
   m_GameObject: {fileID: 711440787870829230}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e51370479a4301c498a768202acbacb4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c1d35bc10f89554f981dcb569b08644, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -275,10 +275,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.06
-  m_Height: 2.4609087
+  m_Radius: 2.3928246
+  m_Height: 4.9092026
   m_Direction: 1
-  m_Center: {x: 0.09053598, y: 1.5847455, z: 0.0133541925}
+  m_Center: {x: 0.090536065, y: 2.2110832, z: 0.5061788}
 --- !u!195 &8049270869669862237
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -344,4 +344,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fe71565265cb94383cb7ed532b4799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 10

@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380580532186854313}
-  m_LocalRotation: {x: 6.965913e-34, y: -2.615656e-27, z: 0.0000002663161, w: 1}
+  m_LocalRotation: {x: -0.031934027, y: 0.000000008969638, z: 0.00000028073703, w: 0.99949}
   m_LocalPosition: {x: -0.76199996, y: 0.00000009689516, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7378257930168586079}
   m_Father: {fileID: 7378291280555517577}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 2.0454768e-31, y: -3.840318e-25, z: 0.000030517576}
+  m_LocalEulerAnglesHint: {x: -3.66, y: -3.840318e-25, z: 0.000030517576}
 --- !u!1 &7380590617708034325
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,8 +139,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380718293139011447}
-  m_LocalRotation: {x: -2.0602969e-20, y: -7.736283e-14, z: -0.0000002663161, w: 1}
-  m_LocalPosition: {x: -1.016, y: -0.00000020993816, z: 2.696784e-14}
+  m_LocalRotation: {x: -2.3637198e-20, y: -8.875617e-14, z: -0.00000030553687, w: 1}
+  m_LocalPosition: {x: -1.016, y: -0.0000002099382, z: 2.696784e-14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7378464483555318921}
@@ -171,7 +171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380736017176555309}
   m_LocalRotation: {x: -0.49999994, y: 0.50000006, z: -0.49999994, w: 0.50000006}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7378291280555517577}
@@ -217,12 +217,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7378447853624065299}
-  - component: {fileID: 7380074418808241765}
   - component: {fileID: 2134231090938763873}
   - component: {fileID: 1382259481092102}
   - component: {fileID: 1382259481092104}
   - component: {fileID: 8385521080980451243}
   - component: {fileID: -1205834921135180705}
+  - component: {fileID: 3638672277763276542}
   m_Layer: 0
   m_Name: RED_Mushroom
   m_TagString: Enemy
@@ -246,25 +246,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
---- !u!95 &7380074418808241765
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7381298347854410235}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e51370479a4301c498a768202acbacb4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!136 &2134231090938763873
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -275,10 +256,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 3.2993233
-  m_Height: 7.2200966
+  m_Radius: 2.42
+  m_Height: 4.75
   m_Direction: 1
-  m_Center: {x: 0.090536, y: 1.4716872, z: 0.01335421}
+  m_Center: {x: 0.15766443, y: 1.4716872, z: 0.01335421}
 --- !u!114 &1382259481092102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,8 +326,27 @@ Rigidbody:
   m_Mass: 23
   m_Drag: 0.01
   m_AngularDrag: 0
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!95 &3638672277763276542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7381298347854410235}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c1d35bc10f89554f981dcb569b08644, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

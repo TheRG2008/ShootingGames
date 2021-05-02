@@ -11,13 +11,13 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Transform _mineSpawnPlace;
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject _mine;
-
+    private Animator _anim;
     private int _bulletInMagazine;
     
 
     private void Awake()
     {
-        //_bulletCount = Player.GetComponent<PlayerStats>().CountBullet;
+        _anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -29,7 +29,8 @@ public class Shoot : MonoBehaviour
         {
             if (_bulletInMagazine > 0)
             {
-                GrateShoot();
+                _anim.SetBool("shoot", true);
+                //GrateShoot();
             }             
         }
 
@@ -51,6 +52,7 @@ public class Shoot : MonoBehaviour
     {
         Instantiate(_bullet, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);   
         _bulletInMagazine = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().BulletInMagazine -= 1;
+        _anim.SetBool("shoot", false);
     }
 
     

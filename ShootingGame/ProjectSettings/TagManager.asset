@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LineAtack
   - Enemy
+  - Points
   layers:
   - Default
   - TransparentFX
