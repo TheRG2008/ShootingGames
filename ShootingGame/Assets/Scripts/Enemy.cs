@@ -35,10 +35,14 @@ public class Enemy : MonoBehaviour
         
 
         _distanse = Vector3.Distance(transform.position, _player.transform.position);
-        if (_distanse <=0.5)
+        if (_distanse <= 0.5)
         {
             _anim.SetBool("atack", true);
-            Atack();
+            //Invoke("Atack", 5);
+        }
+        else
+        {
+            _anim.SetBool("atack", false);
         }
 
     }
@@ -57,6 +61,8 @@ public class Enemy : MonoBehaviour
     {
         _player.gameObject.GetComponent<PlayerStats>().TakeDamage(5);
         _anim.SetBool("atack", false);
+        //_distanse = 2;
+        //CancelInvoke();
     }
 
     public void TakeDamage (float damage)

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class GreenEnemyMove : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    private GameObject[] _point;
+    [SerializeField] private GameObject[] _point;
     private NavMeshAgent _navMeshAgent;
     private float _countPoint;
     private int _random;
@@ -22,13 +22,14 @@ public class GreenEnemyMove : MonoBehaviour
     {
         _point = GameObject.FindGameObjectsWithTag("Points");
 
-        _random = Random.Range(0, _point.Length);       
+             
 
     }
 
 
     private void Update()
     {
+        _random = Random.Range(0, _point.Length);
         _navMeshAgent.SetDestination(_point[_random].transform.position * _speed * Time.deltaTime);
     }
     private void OnTriggerEnter(Collider other)

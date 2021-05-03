@@ -12,12 +12,14 @@ public class Shoot : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private GameObject _mine;
     private Animator _anim;
+    private AudioSource _audioSource;
     private int _bulletInMagazine;
     
 
     private void Awake()
     {
         _anim = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -50,7 +52,8 @@ public class Shoot : MonoBehaviour
 
     private void GrateShoot ()
     {
-        Instantiate(_bullet, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);   
+        Instantiate(_bullet, _bulletSpawnPlace.position, _bulletSpawnPlace.rotation);
+        _audioSource.Play();
         _bulletInMagazine = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>().BulletInMagazine -= 1;
         _anim.SetBool("shoot", false);
     }
