@@ -8,8 +8,6 @@ public class OpenDoorButton : MonoBehaviour
     [SerializeField] private GameObject _bulls;
     [SerializeField] private GameObject _box;
     [SerializeField] private GameObject _wall;
-    
-    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,8 +23,5 @@ public class OpenDoorButton : MonoBehaviour
         _wall.SetActive(true);
         _box.GetComponent<Rigidbody>().useGravity = false;
     }
-
-
-
 
 }

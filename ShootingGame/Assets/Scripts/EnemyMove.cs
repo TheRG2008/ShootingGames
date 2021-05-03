@@ -5,8 +5,7 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    //[SerializeField] private Transform _pointPosition;
+    [SerializeField] private float _speed;    
     [SerializeField] private Transform[] _waypoints;
     [SerializeField] private Transform _player;
     [SerializeField] private int _agrDistance = 3;

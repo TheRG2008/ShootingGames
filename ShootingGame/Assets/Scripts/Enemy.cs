@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         if (_distanse <= 0.5)
         {
             _anim.SetBool("atack", true);
-            //Invoke("Atack", 5);
+            
         }
         else
         {
@@ -47,22 +47,11 @@ public class Enemy : MonoBehaviour
 
     }
 
-    //private void OnTriggerEnter (Collider other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        _anim.SetBool("atack", true);
-    //        //other.GetComponent<PlayerStats>().TakeDamage(5);
-
-    //    }
-    //}
-
     private void Atack ()
     {
         _player.gameObject.GetComponent<PlayerStats>().TakeDamage(5);
         _anim.SetBool("atack", false);
-        //_distanse = 2;
-        //CancelInvoke();
+       
     }
 
     public void TakeDamage (float damage)

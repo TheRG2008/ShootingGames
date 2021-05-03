@@ -40,8 +40,6 @@ public class PlayerMove : MonoBehaviour
         MouseLook();        
     }
 
-  
-
     void Walk()
     {
         _xMove = Input.GetAxis("Horizontal");
@@ -60,8 +58,6 @@ public class PlayerMove : MonoBehaviour
         _directional.y -= _gravity;
         _player.Move(_directional * _speed * Time.deltaTime);
     }
-
-
 
     void MouseLook()
     {

@@ -31,16 +31,12 @@ public class Shoot : MonoBehaviour
         {
             if (_bulletInMagazine > 0)
             {
-                _anim.SetBool("shoot", true);
-                //GrateShoot();
+                _anim.SetBool("shoot", true);                
             }             
         }
-
         if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            
-            InstantMine();
-            
+        {            
+            InstantMine();            
         }
 
     }

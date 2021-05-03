@@ -15,14 +15,8 @@ public class MoveCamera : MonoBehaviour
     }
 
     private void Update()
-    {
-        //_rotation.x = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
-        _rotation.y = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;
-
-        //_rotation.y = Mathf.Clamp(_rotation.y, -90f, 90f);
-        //_camera.transform.localRotation = Quaternion.Euler(_rotation.y, 0f, 0f);
-
-        //transform.Rotate(Vector3.up * _rotation.x);
+    {        
+        _rotation.y = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;       
     }
 
 

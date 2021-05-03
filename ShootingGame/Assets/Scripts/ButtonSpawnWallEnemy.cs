@@ -27,14 +27,7 @@ public class ButtonSpawnWallEnemy : MonoBehaviour
             Instantiate(_enemy, _spawnPoints[_random].position, transform.rotation);
             _countEnemy--;
         }
-        else CancelInvoke();
-            
-
-        //for (int i = 0; i < _spawnPoints.Length; i++)
-        //{
-        //    Instantiate(_enemy, _spawnPoints[i].position, Quaternion.identity);
-        //    _countEnemy -= 1;
-        //}
+        else CancelInvoke(); 
 
     }
 
